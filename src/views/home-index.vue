@@ -4,9 +4,10 @@
     <div class="content">
       <div class="list">
         <ul>
-          <li><router-link to="./homeindex"> homeindex首页 </router-link></li>
+          <li><router-link to="./homeindex"> 资源 </router-link></li>
           <li><router-link to="./ref"> ref </router-link></li>
           <li><router-link to="./reactive"> reactive </router-link></li>
+          <li><router-link to="./useStore"> useStore </router-link></li>
         </ul>
       </div>
       <div class="info"><router-view></router-view></div>

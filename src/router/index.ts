@@ -28,6 +28,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: "/reactive",
                 name: "leareactive",
                 component: () => import("../views/lea-reactive.vue")
+            },
+            {
+                path: "/useStore",
+                name: "useStore",
+                component: () => import("../views/lea-useStore.vue")
             }
         ]
     },

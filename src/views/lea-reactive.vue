@@ -18,6 +18,7 @@ import { defineComponent, reactive } from "vue";
 export default defineComponent({
   name: "leareactive",
   setup() {
+    // eslint-disable-next-line @typescript-eslint/interface-name-prefix
     interface IPeople {
       name: string;
       age: number;
