@@ -3,7 +3,7 @@
     <p>
       <span>获取vuex的值</span>
       <br />
-      <span> {{ refstr }} </span>
+      <span class="color"> {{ refstr }} </span>
     </p>
     <button @click="handleClick">点击获取</button>
   </div>
@@ -36,4 +36,8 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.color{
+    color: rgb(204, 42, 182);
+}
+</style>
