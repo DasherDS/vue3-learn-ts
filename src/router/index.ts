@@ -33,6 +33,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: "/useStore",
                 name: "useStore",
                 component: () => import("../views/lea-useStore.vue")
+            },
+            {
+                path: "/lifecycle",
+                name: "Lifecycle",
+                component: () => import("../views/lea-lifecycleHooks.vue")
             }
         ]
     },
