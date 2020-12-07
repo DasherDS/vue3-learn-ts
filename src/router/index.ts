@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import Home from "../views/Home.vue";
-
+import storage from "../utils/storage"
 const routes: Array<RouteRecordRaw> = [
     {
         path: "/",
@@ -43,8 +43,18 @@ const routes: Array<RouteRecordRaw> = [
                 path: '/navigationguards',
                 name: "NavigationGuards",
                 component: () => import("../views/lea-NavigationGuards/lea-NavigationGuards.vue"),
-                children:[
-                    
+                // redirect: "/testRoutertrue",
+                children: [
+                    {
+                        path: "/testRouterfalse",
+                        name: "testRouterfalse",
+                        component: () => import("../views/lea-NavigationGuards/test-isFalseRouter.vue")
+                    },
+                    {
+                        path: "/testRoutertrue",
+                        name: "testRoutertrue",
+                        component: () => import("../views/lea-NavigationGuards/test-isTrueRouter.vue")
+                    }
                 ]
             }
         ]
@@ -62,11 +72,29 @@ const router = createRouter({
     routes
 });
 
+
+
 //路由守卫  全局  前置
 router.beforeEach((to, from, next): void => {
     console.log('前置路由守卫to', to);
     console.log('前置路由守卫from', from);
-    next()
+    const routerTest = storage.get("routerTest")
+    console.log(to.path,4545,routerTest,1231);
+    if (to.path == "/navigationguards") {
+        let strRouter = ""
+        if (routerTest == '路由守卫测试标识') {
+            strRouter = "testRoutertrue"
+        } else {
+            strRouter = "testRouterfalse"
+        }
+        console.log('strRouter',strRouter);
+         
+        next({name:strRouter})
+    }else{
+      next()  
+    }
+    
+
 })
 //路由守卫 全局  后置
 router.afterEach((to, from): void => {
