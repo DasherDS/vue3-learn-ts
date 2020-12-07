@@ -11,16 +11,15 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import {onBeforeRouteLeave } from "vue-router";
+import { onBeforeRouteLeave } from "vue-router";
 import storage from "../../utils/storage";
 export default defineComponent({
   name: "NavigationGuards",
   setup() {
     const key = "routerTest";
-    onBeforeRouteLeave(()=>{
-        console.log('456');
-        
-    })
+    onBeforeRouteLeave((): void => {
+      alert("确定离开此页面？！");
+    });
     const handleSet = (): void => {
       storage.set(key, "路由守卫测试标识");
     };

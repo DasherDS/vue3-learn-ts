@@ -36,6 +36,14 @@
             >element-plus</a
           >
         </li>
+        <li>
+          <a
+            href="https://vant-contrib.gitee.io/vant/next/#/zh-CN/"
+            target="_blank"
+            rel="noopener"
+            >Vant</a
+          >
+        </li>
       </ul>
     </div>
   </div>

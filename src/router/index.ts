@@ -56,6 +56,11 @@ const routes: Array<RouteRecordRaw> = [
                         component: () => import("../views/lea-NavigationGuards/test-isTrueRouter.vue")
                     }
                 ]
+            },
+            {
+                path: "/vantui",
+                name: "Vantui",
+                component: () => import("../views/lea-Vant.vue")
             }
         ]
     },
@@ -79,7 +84,6 @@ router.beforeEach((to, from, next): void => {
     console.log('前置路由守卫to', to);
     console.log('前置路由守卫from', from);
     const routerTest = storage.get("routerTest")
-    console.log(to.path,4545,routerTest,1231);
     if (to.path == "/navigationguards") {
         let strRouter = ""
         if (routerTest == '路由守卫测试标识') {
@@ -87,13 +91,13 @@ router.beforeEach((to, from, next): void => {
         } else {
             strRouter = "testRouterfalse"
         }
-        console.log('strRouter',strRouter);
-         
-        next({name:strRouter})
-    }else{
-      next()  
+        console.log('strRouter', strRouter);
+
+        next({ name: strRouter })
+    } else {
+        next()
     }
-    
+
 
 })
 //路由守卫 全局  后置
