@@ -38,6 +38,14 @@ const routes: Array<RouteRecordRaw> = [
                 path: "/lifecycle",
                 name: "Lifecycle",
                 component: () => import("../views/lea-lifecycleHooks.vue")
+            },
+            {
+                path: '/navigationguards',
+                name: "NavigationGuards",
+                component: () => import("../views/lea-NavigationGuards/lea-NavigationGuards.vue"),
+                children:[
+                    
+                ]
             }
         ]
     },
@@ -54,4 +62,16 @@ const router = createRouter({
     routes
 });
 
+//路由守卫  全局  前置
+router.beforeEach((to, from, next): void => {
+    console.log('前置路由守卫to', to);
+    console.log('前置路由守卫from', from);
+    next()
+})
+//路由守卫 全局  后置
+router.afterEach((to, from): void => {
+    console.log('后置路由守卫to', to);
+    console.log('后置路由守卫from', from);
+
+})
 export default router;

@@ -9,6 +9,7 @@
           <li><router-link to="./reactive"> reactive </router-link></li>
           <li><router-link to="./useStore"> useStore </router-link></li>
           <li><router-link to="./lifecycle"> 生命周期 </router-link></li>
+          <li><router-link to="./navigationguards"> 路由守卫 </router-link></li>
         </ul>
       </div>
       <div class="info"><router-view></router-view></div>
