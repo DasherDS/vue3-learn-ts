@@ -12,6 +12,7 @@
           <li><router-link to="./navigationguards"> 路由守卫 </router-link></li>
           <li><router-link to="./vantui"> Vant </router-link></li>
           <li><router-link to="./watch"> Watch </router-link></li>
+          <li><router-link to="./watcheffect"> WatchEffect </router-link></li>
         </ul>
       </div>
       <div class="info"><router-view></router-view></div>

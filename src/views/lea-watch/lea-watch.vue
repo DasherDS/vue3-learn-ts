@@ -1,17 +1,17 @@
 <template>
   <div>
-    <h1>监听</h1>
+    <h1>watch 监听</h1>
     <hr />
     <ul class="contant">
       <li>
         <span> {{ num }} </span>
-        <van-button
+        <button
           plain
           hairline
           type="primary"
           size="small"
           @click="handlePlusNum"
-          >增加 1</van-button
+          >增加 1</button
         >
         <span>
           监听的值的变化：新值 {{ warNums.newval }} 旧值 {{ warNums.oldval }}

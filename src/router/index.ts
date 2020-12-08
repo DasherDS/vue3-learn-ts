@@ -66,6 +66,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: "/watch",
                 name: "Watch",
                 component: () => import("../views/lea-watch/lea-watch.vue")
+            },
+            {
+                path: "/watcheffect",
+                name: "WatchEffect",
+                component: () => import("../views/lea-watch/lea-watchEffect.vue")
             }
         ]
     },

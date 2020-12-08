@@ -2,7 +2,7 @@
   <div>
     <h1>Vant</h1>
     <hr />
-    <van-button
+    <!-- <van-button
       color="linear-gradient(to right, #ff6034, #ee0a24)"
       @click="handlePopup"
     >
@@ -13,7 +13,7 @@
         <div class="popups">
             哈哈哈哈
         </div>
-    </van-popup>
+    </van-popup> -->
   </div>
 </template>
 
