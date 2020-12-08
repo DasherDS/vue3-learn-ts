@@ -61,6 +61,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: "/vantui",
                 name: "Vantui",
                 component: () => import("../views/lea-Vant.vue")
+            },
+            {
+                path: "/watch",
+                name: "Watch",
+                component: () => import("../views/lea-watch/lea-watch.vue")
             }
         ]
     },

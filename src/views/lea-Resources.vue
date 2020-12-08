@@ -44,6 +44,14 @@
             >Vant</a
           >
         </li>
+        <li>
+          <a
+            href="https://primefaces.org/primevue/showcase/#/setup"
+            target="_blank"
+            rel="noopener"
+            >primefaces</a
+          >
+        </li>
       </ul>
     </div>
   </div>
